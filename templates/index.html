@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Data Visualization</title>
+</head>
+<body>
+    <h1 style="text-align: center;"><B>Data Analysis Website</B></h1>
+
+    <div style="text-align: center;">
+        <a href="#subject"><B>Grades by subject<B></a> | 
+        <a href="#max_grade"><B>Highest grade by subject<B></a> |
+        <a href="#top_grades"><B>Top 10 grades<B></a>
+    </div>
+
+    <hr>
+
+    <div id="subject">
+       <center> <h2>Grades by subject (percentage)</h2>
+        <img src="data:image/png;base64,{{ subject_chart }}" alt="Pie chart of grades by subject"></center> 
+    </div>
+
+    <hr>
+
+    <div id="max_grade">
+        <center>  <h2>Highest grade by subject</h2>
+        <img src="data:image/png;base64,{{ max_grade_chart }}" alt="Bar chart of highest grades by subject"> </center> 
+    </div>
+
+    <hr>
+
+    <div id="top_grades">
+        <center>  <h2>Top 10 grades</h2>
+        {{ top_grades_table|safe }} </center> 
+    </div>
+</body>
+</html>
